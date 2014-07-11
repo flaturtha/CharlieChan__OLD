@@ -4,13 +4,15 @@ layout: default
 
 <div class="home">
 
-  <h1>Posts</h1>
+  <h1>Stories</h1>
+  <p>Below you will find a collection of short stories, ranging from short and very short to long and very long. Browse by title and word count to find the story to fit your interest and time to read.</p>
 
   <ul class="posts">
     {% for post in site.posts %}
       <li>
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <p class="wordcount">[This story has {{ post.wordcount }} words.]</p>
       </li>
     {% endfor %}
   </ul>
